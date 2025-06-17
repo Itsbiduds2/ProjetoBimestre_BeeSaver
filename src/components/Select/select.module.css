@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .select {
+    border: none;
+    font-size: 1rem;
+    color:  #d1981e;
+    outline: none;
+    background: transparent;
+    appearance: none;
+  }
+  
+  .label {
+    font-size: 0.875rem;
+    color: #374151;
+    margin-bottom: 0.25rem;
+  }
+  
+  .estado, .cidade {
+    border: 2px s #d1981e; 
+  }
+  
+  .default {
+    border: 2px solid #000000;
+  }
+  
