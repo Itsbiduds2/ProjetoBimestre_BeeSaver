@@ -1,7 +1,15 @@
 .link{
     background-color: #d1981e;
-    font-color: white;
+    color: white;
     font-size: 16px;
-    padding-right: 16px;
-    padding-left: 16px;
+    padding: 5px 16px;
+}
+
+.publicar{
+    background-color: #d1981e;
+    color: white;
+    font-size: 16px;
+    padding: 5px 26px;
+    border-radius: 30px;
+    width: 80%;
 }

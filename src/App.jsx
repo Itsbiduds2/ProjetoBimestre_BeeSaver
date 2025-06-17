@@ -1,10 +1,10 @@
 //import './App.css'
-import Button from './components/button/Button'
+import Button from './components/Button'
 
 function App() {
   return (
     <>
-      <Button texto={"Mapa"} tipo={"link"}/>      
+      <Button texto={"Post"} tipo={"publicar"}/>      
     </>
   )
 }
