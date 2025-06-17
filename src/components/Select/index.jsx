@@ -10,7 +10,9 @@ function Select({ label, options, value, onChange, tipo }) {
 
   return (
     <div className={styles.container}>
+
       <label className={styles.label}>{label}</label>
+      
       <select className={styles.select} value={value} onChange={(e) => onChange(e.target.value)}>
         <option value="">Selecionar...</option>
         {options.map((opt, index) => (
@@ -19,6 +21,7 @@ function Select({ label, options, value, onChange, tipo }) {
           </option>
         ))}
       </select>
+
     </div>
   );
 }
