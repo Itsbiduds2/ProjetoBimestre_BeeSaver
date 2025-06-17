@@ -4,7 +4,7 @@ import Button from './components/Button'
 function App() {
   return (
     <>
-      <Button texto={"MAri"} tipo={"categoria"}/>      
+      <Button texto={"Orquideas"} tipo={"categoria"}/>      
     </>
   )
 }
