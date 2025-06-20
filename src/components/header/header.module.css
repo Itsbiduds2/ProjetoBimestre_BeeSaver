@@ -1,0 +1,16 @@
+header {
+    background-color: #d1981e; 
+    padding: 25px 12px 10px 12px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+header h1 {
+    color: #2b2b2b;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  

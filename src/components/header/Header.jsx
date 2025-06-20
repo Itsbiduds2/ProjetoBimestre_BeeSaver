@@ -1,9 +1,11 @@
+import style from "./header.module.css"
+
 function Header() {
     return (
       <>
-        <header>
-          
-        </header>
+        <header className={style.header}>
+      <h1 className={style.title}>BeeSaver</h1>
+    </header>
       </>
     )
   }
