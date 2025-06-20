@@ -14,7 +14,7 @@ function Homepage() {
         <div className={style.buttons}>
             <Button texto={"Abelhas"} tipo={"link"}/>
             <Button texto={"Jardim"} tipo={"link"}/>
-            <Button texto={"Mapa"} tipo={"link"} endereco={""}/>
+            <Button texto={"Mapa"} tipo={"link"} />
         </div>
 
         <div className={style.videoContainer}>
