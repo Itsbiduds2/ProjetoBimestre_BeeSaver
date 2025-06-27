@@ -1,8 +1,6 @@
 import Button from "../../components/Button"
 import Header from "../../components/header/Header"
 import style from "./homepage.module.css"
-import MapaColaborativo from "../mapaColaborativo"
-
 
 function Homepage() {
     return (

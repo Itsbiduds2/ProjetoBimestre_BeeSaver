@@ -1,12 +1,12 @@
 import Homepage from './pages/homepage';
-import Mapacolaborativo from './pages/mapaColaborativo';
+import MapaColaborativo from './pages/mapaColaborativo';
 
 function App() {
 
   return (
     <>
-     <Homepage/>
-     <Mapacolaborativo/>
+     <MapaColaborativo/>
+     
 
     </>
   )
