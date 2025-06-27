@@ -1,6 +1,7 @@
 import Header from "../../components/header/Header";
 import React, { useState } from 'react';
 import styles from './MapaColaborativo.module.css';
+import Button from "../../components/button";
 
 function MapaColaborativo() {
   const [estado, setEstado] = useState('');
@@ -60,8 +61,11 @@ function MapaColaborativo() {
         <span className={styles.pinIcon}>📍</span>
       </div>
 
-      <button className={styles.btnPublicar}>Publicar</button>
+      <Button texto="Publicar" tipo="publicar"/>
     </div>
+
+    
+
     </>
   );
 }

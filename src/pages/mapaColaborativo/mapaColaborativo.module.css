@@ -83,18 +83,6 @@
   font-size: 18px;
 }
 
-.btnPublicar {
-  background-color: #d4a12a;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s;
-}
-
 .btnPublicar:hover {
   background-color: #c38f1f;
 }
