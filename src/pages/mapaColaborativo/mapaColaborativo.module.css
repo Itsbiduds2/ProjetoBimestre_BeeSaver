@@ -1,0 +1,84 @@
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    padding: 16px;
+    border-radius: 8px;
+    background: #fff;
+    font-family: sans-serif;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+  
+  .select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .foto-area {
+    background-color: #f0f0f0;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  
+  .foto-label {
+    cursor: pointer;
+    text-align: center;
+    color: #555;
+  }
+  
+  .foto-icone {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .foto-input {
+    display: none;
+  }
+  
+  .localizacao-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .icone-mapa {
+    margin-left: 8px;
+  }
+  
+  .btn-publicar {
+    width: 100%;
+    background-color: #d9a528;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .btn-publicar:hover {
+    background-color: #c28f1d;
+  }
+  
