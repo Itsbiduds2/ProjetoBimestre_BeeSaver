@@ -1,31 +1,22 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    border-radius: 4px;
-    width: 60%;
-  }
-  
-  .select {
-    padding: 3px 5px;
-    border: 1px #d1981e solid;
-    border-radius: 5px;
-    font-size: 14px;
-    color:rgb(81, 81, 81);
-    outline: none;
-    background: transparent;
-  }
-  
-  .label {
-    font-size: 0.875rem;
-    color: #d1981e;
-    margin-bottom: 0.25rem;
-  }
-  
-  .estado, .cidade {
-    border: 2px solid black; 
-  }
-  
-  .default {
-    border: 2px solid #000000;
-  }
-  
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.select {
+  padding: 6px 10px;
+  border: 1px solid #d1981e;
+  border-radius: 5px;
+  font-size: 14px;
+  color: rgb(81, 81, 81);
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}

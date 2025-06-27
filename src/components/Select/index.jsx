@@ -1,29 +1,21 @@
-import styles from './Select.module.css';
+import styles from './select.module.css';
 
-function Select({ label, options, value, onChange, tipo }) {
-  const estilo =
-    tipo === 'cidade'
-      ? styles.cidade
-      : tipo === 'estado'
-      ? styles.estado
-      : styles.default;
-
+const Select = ({ options, value, onChange, name, id }) => {
   return (
-    <div className={styles.container}>
-
-      <label className={styles.label}>{label}</label>
-      
-      <select className={styles.select} value={value} onChange={(e) => onChange(e.target.value)}>
-        <option value="">Selecionar...</option>
-        {options.map((opt, index) => (
-          <option key={index} value={opt}>
-            {opt}
-          </option>
-        ))}
-      </select>
-
-    </div>
+    <select
+      className={styles.select}
+      value={value}
+      onChange={onChange}
+      name={name}
+      id={id}
+    >
+      {options.map((opt) => (
+        <option key={opt.value} value={opt.value}>
+          {opt.label}
+        </option>
+      ))}
+    </select>
   );
-}
+};
 
 export default Select;
