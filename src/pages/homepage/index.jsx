@@ -1,4 +1,4 @@
-import Button from "../../components/Button"
+import Button from "../../components/button"
 import Header from "../../components/header/Header"
 import style from "./homepage.module.css"
 
