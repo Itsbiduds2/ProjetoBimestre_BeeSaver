@@ -6,6 +6,36 @@
   width: 100%;
 }
 
+.header {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.nomeInput{
+  padding: 6px 10px;
+  border: 1px solid #d1981e;
+  border-radius: 5px;
+  font-size: 14px;
+  color: rgb(81, 81, 81);
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
 .select {
   width: 100%;
   max-width: 300px;

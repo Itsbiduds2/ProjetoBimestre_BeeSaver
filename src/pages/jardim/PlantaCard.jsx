@@ -1,14 +1,12 @@
 import styles from './PlantaCard.module.css';
+import fotoCard from "../../assets/foto-card.jpg";
+
 
 const PlantaCard = ({ nome }) => {
   return (
     <>
     <div className={styles.card}>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sunflower_sky_backdrop.jpg/320px-Sunflower_sky_backdrop.jpg"
-        alt="planta"
-        className={styles.imagem}
-      />
+      <img src={fotoCard} alt="Foto PLanta" className={styles.imagem}/>
       <span className={styles.nome}>{nome}</span>
     </div>
     </>
