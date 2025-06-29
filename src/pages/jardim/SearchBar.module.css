@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f0f2f5;
+  border-radius: 12px;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ddd;
+}
+
+.input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.icon {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+}

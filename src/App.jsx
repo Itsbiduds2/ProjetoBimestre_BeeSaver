@@ -1,5 +1,5 @@
-import Select from './components/select';
 import Homepage from './pages/homepage';
+import Jardim from './pages/jardim/Jardim';
 import MapaColaborativo from './pages/mapaColaborativo';
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
     <>
      <Homepage/>
      <MapaColaborativo/>
+     <Jardim/>
      
 
     </>
