@@ -1,17 +1,19 @@
+// src/pages/jardim/SearchBar.jsx
+import React from 'react';
 import styles from './SearchBar.module.css';
 
-const SearchBar = () => {
+const SearchBar = ({ value, onChange }) => {
   return (
-    <>
     <div className={styles.wrapper}>
       <input
         type="text"
         placeholder="Pesquise por plantas..."
         className={styles.input}
+        value={value}
+        onChange={(e) => onChange?.(e.target.value)}
       />
-      <span className={styles.icon}>🔍</span>
+      <span className={styles.icon} role="img" aria-label="buscar">🔍</span>
     </div>
-    </>
   );
 };
 
