@@ -1,4 +1,6 @@
-const BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5173'; 
+// Vite doesn't expose `process.env` in the browser. Use `import.meta.env` for env vars
+// Prefix environment variables with VITE_ to expose them to the client if needed.
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5173';
 
 async function request(path, options = {}) {
   const url = `${BASE_URL}${path}`;

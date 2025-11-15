@@ -1,8 +1,8 @@
 import Header from "../../components/header/Header";
 import React, { useState } from 'react';
-import styles from './MapaColaborativo.module.css';
+import styles from './mapaColaborativo.module.css';
 import Button from "../../components/button";
-import Select from "../../components/select";
+import Select from "../../components/Select";
 
 function MapaColaborativo() {
   const [estado, setEstado] = useState('');
