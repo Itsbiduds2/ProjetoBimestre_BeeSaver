@@ -33,7 +33,7 @@ function MapaColaborativo() {
   const handlePublicar = async (e) => {
     e.preventDefault();
 
-    console.log("a")
+    console.log("funcionando a")
     if (!nome.trim() || !estado || !cidade) {
       alert("Preencha todos os campos.");
       return;
@@ -51,11 +51,11 @@ function MapaColaborativo() {
         const res = await fetch(`${API_URL}/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(planta),
+        body: JSON.stringify(novaPlanta),
       });
-      console.log("b")
-    } catch (erro) {
-    console.log("alguma coisa")
+    } catch (Erro) {
+    console.log("Funcionando b")
+    alert("Planta publicada!")
   }}
 
   return (

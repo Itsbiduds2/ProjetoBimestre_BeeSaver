@@ -11,7 +11,6 @@ export async function createPlanta(planta) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(planta),
   });
-  console.log("b")
   return res.json();
 }
 
