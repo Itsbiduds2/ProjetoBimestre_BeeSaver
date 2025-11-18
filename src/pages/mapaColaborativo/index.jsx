@@ -33,7 +33,7 @@ function MapaColaborativo() {
       <Header />
 
       <div className={styles.header}>
-        <button className={styles.backBtn}>←</button>
+          <button className={styles.backBtn} onClick={() => window.history.back()}>←</button>
         <h1 className={styles.title}>Mapa Colaborativo</h1>
       </div>
 

@@ -1,4 +1,3 @@
-// src/pages/jardim/Jardim.jsx
 import React, { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import styles from './Jardim.module.css';
