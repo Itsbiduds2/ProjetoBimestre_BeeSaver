@@ -2,6 +2,7 @@ import Button from "../../components/button"
 import Header from "../../components/header/Header"
 import style from "./homepage.module.css"
 
+
 function Homepage() {
     return (
       <>      
@@ -10,10 +11,11 @@ function Homepage() {
         <h2 className={style.title}>Inicio</h2>
         <hr className={style.line}/>
         <div className={style.buttons}>
-            <Button texto={"Abelhas"} tipo={"link"}/>
-            <Button texto={"Jardim"} tipo={"link"}/>
-            <Button texto={"Mapa"} tipo={"link"} />
+          <Button texto="Abelhas" tipo="link" endereco="/abelhas" />
+          <Button texto="Jardim" tipo="link" endereco="/jardim" />
+          <Button texto="Mapa" tipo="link" endereco="/mapa" />
         </div>
+
 
         <div className={style.videoContainer}>
           <iframe
