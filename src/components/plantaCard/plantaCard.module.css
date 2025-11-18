@@ -1,12 +1,32 @@
-.card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 15px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
 .btns {
   display: flex;
   gap: 10px;
 }
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+.imagem {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.cardBody {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nome {
+  font-weight: 600;
+}
+.actions button {
+  margin-left: 8px;
+}
+

@@ -1,5 +1,4 @@
-// src/pages/jardim/SearchBar.jsx
-import React from 'react';
+
 import styles from './SearchBar.module.css';
 
 const SearchBar = ({ value, onChange }) => {
