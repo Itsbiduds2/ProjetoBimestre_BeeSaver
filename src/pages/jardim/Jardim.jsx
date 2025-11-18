@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import Header from '../../components/header/Header';
 import styles from './Jardim.module.css';
-import * as api from '../../services/api';
-import SearchBar from '../../components/searchBar/SearchBar';
-import PlantaCard from '../../components/plantaCard';
+import Header from '../../components/header/Header';
+import SearchBar from "../../components/searchBar/SearchBar"
 
 const Jardim = () => {
  
@@ -17,7 +14,7 @@ const Jardim = () => {
           <h1 className={styles.title}>Jardim</h1>
         </header>
 
-        <SearchBar value={search} onChange={setSearch} />
+        <SearchBar/>
 
         <button className={styles.meuJardimBtn}>meu jardim</button>
 
