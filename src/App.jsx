@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import Homepage from "./pages/homepage";
 import Jardim from "./pages/jardim/Jardim";
 import MapaColaborativo from "./pages/mapaColaborativo";
