@@ -1,6 +1,4 @@
-// Vite doesn't expose `process.env` in the browser. Use `import.meta.env` for env vars
-// Prefix environment variables with VITE_ to expose them to the client if needed.
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5173';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
 
 async function request(path, options = {}) {
   const url = `${BASE_URL}${path}`;
@@ -12,14 +10,14 @@ async function request(path, options = {}) {
 
     if (!res.ok) {
       let errBody = null;
-      try { errBody = await res.json(); } catch(e){ /* ignore */ }
+      try { errBody = await res.json(); } catch(e){}
       const errorMessage = errBody?.message || `${res.status} ${res.statusText}`;
       throw new Error(errorMessage);
     }
 
     if (res.status === 204) return null;
-    const data = await res.json();
-    return data;
+    return await res.json();
+
   } catch (err) {
     throw err;
   }
@@ -33,7 +31,3 @@ export const updatePlanta = (id, planta) =>
   request(`/plantas/${id}`, { method: 'PUT', body: JSON.stringify(planta) });
 export const deletePlanta = (id) =>
   request(`/plantas/${id}`, { method: 'DELETE' });
-
-export default {
-  getPlantas, getPlanta, createPlanta, updatePlanta, deletePlanta
-};

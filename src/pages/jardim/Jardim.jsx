@@ -10,7 +10,7 @@ const Jardim = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [search, setSearch] = useState('');
-  const [editing, setEditing] = useState(null); // planta sendo editada
+  const [editing, setEditing] = useState(null);
   const [formNome, setFormNome] = useState('');
 
   useEffect(() => {
@@ -22,7 +22,6 @@ const Jardim = () => {
     setError(null);
     try {
       const data = await api.getPlantas();
-      // assume data é array de plantas { id, nome, ... }
       setPlantas(Array.isArray(data) ? data : []);
     } catch (err) {
       setError(`Falha ao carregar plantas: ${err.message}`);
@@ -37,6 +36,7 @@ const Jardim = () => {
       alert('Digite um nome válido.');
       return;
     }
+
     try {
       const newPlanta = { nome: formNome.trim() };
       const created = await api.createPlanta(newPlanta);
@@ -62,9 +62,14 @@ const Jardim = () => {
   const handleSaveEdit = async (e) => {
     e.preventDefault();
     if (!editing) return;
+
     try {
-      const updated = await api.updatePlanta(editing.id, { ...editing, nome: formNome.trim() });
-      setPlantas(prev => prev.map(p => (p.id === updated.id ? updated : p)));
+      const updated = await api.updatePlanta(editing.id, {
+        ...editing,
+        nome: formNome.trim(),
+      });
+
+      setPlantas(prev => prev.map(p => p.id === updated.id ? updated : p));
       setEditing(null);
       setFormNome('');
       alert('Planta atualizada com sucesso.');
@@ -75,6 +80,7 @@ const Jardim = () => {
 
   const handleDelete = async (id) => {
     if (!window.confirm('Deseja realmente excluir esta planta?')) return;
+
     try {
       await api.deletePlanta(id);
       setPlantas(prev => prev.filter(p => p.id !== id));
@@ -97,13 +103,12 @@ const Jardim = () => {
           <h1 className={styles.title}>Jardim</h1>
         </header>
 
-        <SearchBar value={search} onChange={(v) => setSearch(v)} />
+        <SearchBar value={search} onChange={setSearch} />
 
         <button className={styles.meuJardimBtn}>meu jardim</button>
 
         <h2 className={styles.subtitulo}>Plantas</h2>
 
-        {/* Form para criar / editar */}
         <div className={styles.formArea}>
           <form onSubmit={editing ? handleSaveEdit : handleCreate} className={styles.form}>
             <input
@@ -142,6 +147,7 @@ const Jardim = () => {
             ))
           )}
         </div>
+
       </div>
     </>
   );

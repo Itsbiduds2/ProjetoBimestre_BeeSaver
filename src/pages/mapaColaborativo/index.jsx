@@ -1,5 +1,7 @@
-import Header from "../../components/header/Header";
 import React, { useState } from 'react';
+
+import Header from "../../components/header/Header";
+import * as api from "../../services/api";
 import styles from './mapaColaborativo.module.css';
 import Button from "../../components/button";
 import Select from "../../components/Select";
@@ -27,6 +29,28 @@ function MapaColaborativo() {
       { value: "niteroi", label: "Niterói" },
     ],
   };
+  const handlePublicar = async () => {
+  if (!nome.trim() || !estado || !cidade) {
+    alert("Preencha todos os campos.");
+    return;
+  }
+
+  const novaPlanta = {
+    nome: nome,
+    estado: estado,
+    cidade: cidade,
+    nomePublicacao: nome,
+  };
+
+  try {
+    await api.createPlanta(novaPlanta);
+    alert("Publicação enviada!");
+    window.location.href = "/jardim";
+  } catch (err) {
+    alert("Erro ao publicar: " + err.message);
+  }
+};
+
 
   return (
     <>
@@ -83,7 +107,12 @@ function MapaColaborativo() {
           <span className={styles.pinIcon}>📍</span>
         </div>
 
-        <Button texto="Publicar" tipo="publicar" />
+          <Button 
+           texto="Publicar" 
+           tipo="publicar" 
+           onClick={handlePublicar}
+          />
+
       </div>
     </>
   );
