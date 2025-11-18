@@ -1,33 +1,31 @@
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+const API_URL = "http://localhost:5000/plantas";
 
-async function request(path, options = {}) {
-  const url = `${BASE_URL}${path}`;
-  try {
-    const res = await fetch(url, {
-      headers: { 'Content-Type': 'application/json' },
-      ...options,
-    });
-
-    if (!res.ok) {
-      let errBody = null;
-      try { errBody = await res.json(); } catch(e){}
-      const errorMessage = errBody?.message || `${res.status} ${res.statusText}`;
-      throw new Error(errorMessage);
-    }
-
-    if (res.status === 204) return null;
-    return await res.json();
-
-  } catch (err) {
-    throw err;
-  }
+export async function getPlantas() {
+  const res = await fetch(`${API_URL}/`);
+  return res.json();
 }
 
-export const getPlantas = () => request('/plantas', { method: 'GET' });
-export const getPlanta = (id) => request(`/plantas/${id}`, { method: 'GET' });
-export const createPlanta = (planta) =>
-  request('/plantas', { method: 'POST', body: JSON.stringify(planta) });
-export const updatePlanta = (id, planta) =>
-  request(`/plantas/${id}`, { method: 'PUT', body: JSON.stringify(planta) });
-export const deletePlanta = (id) =>
-  request(`/plantas/${id}`, { method: 'DELETE' });
+export async function createPlanta(planta) {
+  const res = await fetch(`${API_URL}/`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(planta),
+  });
+  console.log("b")
+  return res.json();
+}
+
+export async function updatePlanta(id, data) {
+  const res = await fetch(`${API_URL}/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  return res.json();
+}
+
+export async function deletePlanta(id) {
+  await fetch(`${API_URL}/${id}`, {
+    method: "DELETE",
+  });
+}
