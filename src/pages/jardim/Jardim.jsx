@@ -97,6 +97,7 @@ const Jardim = () => {
   return (
     <>
       <Header />
+      
       <div className={styles.container}>
         <header className={styles.header}>
           <button className={styles.backBtn} onClick={() => window.history.back()}>←</button>
