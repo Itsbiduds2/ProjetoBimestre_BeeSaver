@@ -19,4 +19,5 @@ e no do apiBeeSaver:
 python app.py
 
 ent npm run dev e ir pro link
-
+Video:
+https://www.youtube.com/watch?v=Ers30gvR11Y
